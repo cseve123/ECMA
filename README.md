@@ -1,2 +1,2 @@
 # ECMA
-js练习
+ECMA学习和练习
