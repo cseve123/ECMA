@@ -24,5 +24,5 @@ arr.fill('imooc', 1, 3)
 
 // Array.includes() 是否包含
 let arr6 = [1, 2, 3, NaN];
-console.log(arr.includes(NaN)) // true
-console.log(arr.indexOf(NaN)) // -1
+console.log(arr6.includes(NaN)) // true
+console.log(arr6.indexOf(NaN)) // -1
