@@ -6,6 +6,7 @@ module.exports = {
     output: {
         filename: 'index.js'
     },
+    devtool: 'cheap-module-eval-source-map',
     module: {
         rules: [{
             test: /\.js$/,
