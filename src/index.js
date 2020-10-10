@@ -4,6 +4,7 @@
 // import './007-rest';
 // import './008-arrow-function';
 // import './009-object-new'
-import './010-copy';
+// import './010-copy';
+import './011-class';
 // let sum = (x, y) => x + y
 // console.log(sum(4, 5))
