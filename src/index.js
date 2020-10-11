@@ -10,6 +10,7 @@
 // import './013-set'
 // import './014-map';
 // import './015-string-new';
-import './016-regexp-new';
+// import './016-regexp-new';
+import './017-number-new'
 // let sum = (x, y) => x + y
 // console.log(sum(4, 5))
