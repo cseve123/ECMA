@@ -7,6 +7,8 @@
 // import './010-copy';
 // import './011-class';
 // import './012-symbol';
-import './013-set'
+// import './013-set'
+// import './014-map';
+import './015-string-new';
 // let sum = (x, y) => x + y
 // console.log(sum(4, 5))
