@@ -108,3 +108,30 @@ const obj9_4 = {
 }
 // 解构剩余的，放最后一个
 const {name9, age9, ...rest9} = obj9_4;
+
+// ---------------------------
+// ES10
+// Object.fromEntries()
+const obj10 = {
+  name: 'imooc',
+  age: 1
+}
+const entries10 = Object.entries(obj10);
+console.log(entries10);
+const fromEntries10 = Object.fromEntries(entries10)
+console.log(fromEntries10);
+// 将map -> 对象
+const map10 = new Map();
+map10.set('name', 'df');
+const mapEntries = Object.fromEntries(map10);
+console.log(mapEntries);
+
+const course10 = {
+  math: 80,
+  english: 85,
+  chinese: 90
+}
+const res10 = Object.entries(course10).filter(([key, val]) => {
+  return val > 80;
+})
+console.log(Object.fromEntries(res10));
