@@ -31,3 +31,13 @@ console.log(arr6.indexOf(NaN)) // -1
 console.log(arr6.includes(3, 1)) // 1 为位置索引
 console.log(arr6.includes({name: 'a'})); // false 只能判断基本类型
 console.log(arr6.includes('1')) // false 严格模式匹配
+
+// -----------------------
+// ES10
+// 扁平化数组
+// Array.prototype.flat()
+const arr10 = [1,2,3,[4,5,6,[7,8,9]]];
+console.log(arr10.flat(2));
+const flatMap10 = [1,2,3,4,5];
+const res10 = flatMap10.flatMap(x=> [x+1]);
+console.log(res10);
