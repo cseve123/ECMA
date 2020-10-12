@@ -13,6 +13,7 @@
 // import './016-regexp-new';
 // import './017-number-new'
 // import './018-proxy'
-import './019-reflect'
+// import './019-reflect'
+import './021-promise'
 // let sum = (x, y) => x + y
 // console.log(sum(4, 5))
