@@ -6,7 +6,7 @@
 // import './006-function-arguments';
 // import './007-rest';
 // import './008-arrow-function';
-// import './009-object-new'
+import './009-object-new'
 // import './010-copy';
 // import './011-class';
 // import './012-symbol';
@@ -21,6 +21,6 @@
 // import './022-generator'
 // import './023-iterator'
 // import './024-module'
-import './025-async-await';
+// import './025-async-await';
 // let sum = (x, y) => x + y
 // console.log(sum(4, 5))
