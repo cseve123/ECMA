@@ -47,3 +47,10 @@ function foo3(x, y) {
 // bind 绑定作用域，里的this
 foo3.bind({ name: 'xiecheng' })(1, 2);
 console.log((function(){}).bind({}).name);  // bound
+
+// -----------------
+// ES8-尾都号-允许函数参数列表最后多一个逗号
+function trailing(x,y,) {
+  console.log(x,y);
+}
+trailing(1,2)
