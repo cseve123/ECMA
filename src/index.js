@@ -19,7 +19,7 @@
 // import './019-reflect'
 // import './021-promise'
 // import './022-generator'
-// import './023-iterator'
+import './023-iterator'
 // import './024-module'
 // import './025-async-await';
 // let sum = (x, y) => x + y

@@ -2,6 +2,9 @@
 // 为不同数据结构提供统一访问机制 for of
 // 可以让不可遍历可遍历
 
+const { resolve } = require("core-js/fn/promise");
+const { asyncIterator } = require("core-js/fn/symbol");
+
 // 模拟原理
 function makeIterator(arr) {
     let nextIndex = 0;
@@ -84,3 +87,41 @@ console.log(it1.next());
 console.log(it1.next());
 console.log(it1.next());
 // 原生可遍历 Array，Map,Set,String，TypedArray，arguments,NodeList
+
+// ------------------------------
+// ES9
+// 异步迭代器
+function getPromise(time) {
+    return new Promise((resolve, reject)=> {
+        setTimeout(()=> {
+            resolve({
+                value: time,
+                done: false
+            });
+        }, time);
+    })
+}
+const arr9 = [getPromise(1000), getPromise(2000),getPromise(3000)]
+// 异步的迭代器
+arr9[Symbol.asyncIterator] = function () {
+    let nextIndex = 0;
+    return {
+        next() {
+            return nextIndex < arr9.length ? arr9[nextIndex++] : Promise.resolve({
+                value: undefined,
+                done: true
+            })
+        }
+    }
+}
+// 这里都是异步的方法,forof只有pending
+// 得用for await fo 等待promise状态完成再去进行下一次操作
+// for(let item of arr9){
+//     console.log(item) // promise pending
+// }
+async function asyncIterator9(){
+    for await(let item of arr9) {
+        console.log(item);
+    }
+}
+asyncIterator9();
