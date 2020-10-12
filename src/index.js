@@ -11,6 +11,7 @@
 // import './014-map';
 // import './015-string-new';
 // import './016-regexp-new';
-import './017-number-new'
+// import './017-number-new'
+import './018-proxy'
 // let sum = (x, y) => x + y
 // console.log(sum(4, 5))
