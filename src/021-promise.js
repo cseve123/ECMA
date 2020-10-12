@@ -1,9 +1,10 @@
+import { set } from 'core-js/fn/dict';
 import ajax from './020-ajax';
 // ES6异步
 // promise优势在于状态管理
 // resolve
 
-const { resolve } = require("core-js/fn/promise")
+const { resolve, reject } = require("core-js/fn/promise")
 
 // reject
 let p = new Promise((resolve, reject)=> {
@@ -174,4 +175,22 @@ Promise.race([getImg(), timeout()])
 })
 .catch(err => {
     console.log(err)
+})
+
+// ------------------------
+// ES9
+// Promise.prototype.finally(),不论状态结果是什么，finally()都会执行
+new Promise((resolve, reject) =>{
+    setTimeout(()=>{
+        resolve('success');
+    })
+})
+.then(res=> {
+    console.log(res)
+})
+.catch(err=> {
+    console.log(err)
+})
+.finally(()=> { // 都会执行
+    console.log('finally');
 })
