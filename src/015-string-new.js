@@ -35,3 +35,15 @@ console.log(str2.endsWith('im')) // false，以什么结尾
 
 const newStr = str2.repeat(10);
 console.log(newStr);
+
+// ---------------------------
+// ES8
+// String.prototype.padStart(length, 'x') // 字符的长度，填充占位
+// String.prototype.pdEnd(length, 'x)
+const str3 = 'imooc';
+console.log(str3.padStart(8, 'x')); //xxxximooc
+console.log(str3.padEnd(8, 'x')) // imoocxxx
+console.log('1'.padStart(2, '0')) //常用数字格式的补全
+const tel = '17521301820';
+const newTel = tel.slice(-4).padStart(tel.length, '*'); // 常用手机隐藏
+console.log(newTel);
