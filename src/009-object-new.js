@@ -81,3 +81,30 @@ for(let key in obj4) {
 }
 // 获取单个的属性描述符
 console.log(Object.getOwnPropertyDescriptor(obj4, 'name'))
+
+// ----------------------------------
+// ES9
+// rest
+const obj9_1 = {
+  name: 'imo',
+  age: 1,
+  obj: {
+    num: 2
+  }
+}
+const obj9_2= {
+  school: 'imooc'
+}
+// 克隆对象-是浅拷贝
+const obj9_3 = {
+  ...obj9_1
+}
+obj9_1.obj.num = 3;
+console.log(obj9_3);
+// 合并对象
+const obj9_4 = {
+  ...obj9_1,
+  ...obj9_2
+}
+// 解构剩余的，放最后一个
+const {name9, age9, ...rest9} = obj9_4;
