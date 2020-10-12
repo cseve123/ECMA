@@ -91,3 +91,7 @@ function getArea(shape) {
   return area;
 }
 console.log(getArea(shapeType.triangle));
+
+// ------------------
+// ES10 获取描述
+console.log(s6.description);

@@ -51,6 +51,11 @@ console.log((function(){}).bind({}).name);  // bound
 // -----------------
 // ES8-尾都号-允许函数参数列表最后多一个逗号
 function trailing(x,y,) {
+  // zhushi
   console.log(x,y);
 }
 trailing(1,2)
+
+// ------------------
+// ES10 返回事实片段Function.prototype.toString()
+console.log(trailing.toString());
