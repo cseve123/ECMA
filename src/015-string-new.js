@@ -10,6 +10,7 @@ for (let item of 'imooc') {
 }
 
 // 模板字符串
+// ES9 放松了`\unicode and`语法的检测
 let str = `字符串模板${1}`;
 // 带标签的模板字符串，第一个参数是字符串数组，剩下的参数是变量参数
 const foo = (a, b, c, d) => {
