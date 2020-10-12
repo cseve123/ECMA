@@ -48,3 +48,13 @@ console.log('1'.padStart(2, '0')) //常用数字格式的补全
 const tel = '17521301820';
 const newTel = tel.slice(-4).padStart(tel.length, '*'); // 常用手机隐藏
 console.log(newTel);
+
+// -------------------
+// ES10
+// 去掉空格
+// String.prototype.trimStart()
+// String.prototype.trimEnd()
+const str10 = ' imooc  ';
+// console.log(str10.trimStart());
+// console.log(str10.trimEnd());
+console.log(str10.trim())
