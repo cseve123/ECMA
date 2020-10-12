@@ -22,7 +22,12 @@ let arr5 = [1, 2, 3, 4, 5];
 arr.fill('imooc', 1, 3)
 // [1, imooc, imooc, 4, 5]
 
+// --------------------------------
+// ES7
 // Array.includes() 是否包含
-let arr6 = [1, 2, 3, NaN];
+let arr6 = [1, 2, 3, NaN, {name: 'a'}];
 console.log(arr6.includes(NaN)) // true
 console.log(arr6.indexOf(NaN)) // -1
+console.log(arr6.includes(3, 1)) // 1 为位置索引
+console.log(arr6.includes({name: 'a'})); // false 只能判断基本类型
+console.log(arr6.includes('1')) // false 严格模式匹配

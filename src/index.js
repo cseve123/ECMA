@@ -1,5 +1,8 @@
 // import './001-let';
 // import './002-const';
+// import './003-destructuring';
+// import './004-array-each';
+import './005-array-new';
 // import './006-function-arguments';
 // import './007-rest';
 // import './008-arrow-function';
@@ -17,6 +20,6 @@
 // import './021-promise'
 // import './022-generator'
 // import './023-iterator'
-import './024-module'
+// import './024-module'
 // let sum = (x, y) => x + y
 // console.log(sum(4, 5))
