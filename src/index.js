@@ -14,6 +14,9 @@
 // import './017-number-new'
 // import './018-proxy'
 // import './019-reflect'
-import './021-promise'
+// import './021-promise'
+// import './022-generator'
+// import './023-iterator'
+import './024-module'
 // let sum = (x, y) => x + y
 // console.log(sum(4, 5))
