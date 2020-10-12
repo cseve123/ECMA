@@ -159,7 +159,7 @@ console.log(sum(1, 2))
 console.log(sum.call(null, 1, 2, 3))
 console.log(sum.apply(null,[1,2,3]))
 
-// construt 拦截new命令,必须返回一个对象
+// construct 拦截new命令,必须返回一个对象
 let user5 = class {
     constructor(name){
         this.name = name;
@@ -167,6 +167,7 @@ let user5 = class {
 }
 user5 = new Proxy(user5, {
     construct(target, args, newTarget) {
+        console.log('拦截new调用')
         return new target(...args);
     }
 })
