@@ -20,8 +20,13 @@ console.log(Number.isInteger(1.2)) //false
 
 // 0.1 + 02 = 0.3?????? IEEE754双进度标准存储二进制数字，转而成二进制会很长，会有精度缺失
  
+// 幂运算
 const max = Math.pow(2, 53);
+// ---------------------------
+// ES7 ** 幂运算
+const max2 = 2 ** 53
 console.log(max);
+console.log(max2);
 console.log(Number.MAX_SAFE_INTEGER === max -1) // 最大安全数
 console.log(Number.MIN_SAFE_INTEGER)
 console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1))
