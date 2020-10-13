@@ -12,9 +12,9 @@
 // import './012-symbol';
 // import './013-set'
 // import './014-map';
-import './015-string-new';
+// import './015-string-new';
 // import './016-regexp-new';
-// import './017-number-new'
+import './017-number-new'
 // import './018-proxy'
 // import './019-reflect'
 // import './021-promise'
@@ -24,5 +24,6 @@ import './015-string-new';
 // import './025-async-await';
 // import './026-try-catch'
 // import './027-json'
+// import './028-import'
 // let sum = (x, y) => x + y
 // console.log(sum(4, 5))

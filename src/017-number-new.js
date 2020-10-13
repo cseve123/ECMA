@@ -49,3 +49,15 @@ console.log(Math.sign(NaN)) // NaN
 // Math.cbrt() 计算立方根
 console.log(Math.cbrt(8)); // 2
 console.log(Math.cbrt('imooc')) // NaN
+
+// -----------------------------
+// ES11
+// bigInt 超过最大安全数的数 末尾+'n' 类型变了 值不变
+const bigInt = 9007199254740996n // 超过的最大数
+console.log(bigInt, typeof bigInt);
+console.log(1n == 1) // true
+console.log(1n === 1) // fasle bigInt === number
+const bigIn2 = BigInt(9007199254740996n);
+console.log(bigIn2)
+const num11 = bigIn2 + bigInt;
+console.log(num11, num11.toString());
