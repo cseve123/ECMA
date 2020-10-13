@@ -194,3 +194,46 @@ new Promise((resolve, reject) =>{
 .finally(()=> { // 都会执行
     console.log('finally');
 })
+
+// ------------------------
+// ES11 Promise.allSettled()
+// Promise.all 一个失败都失败了
+// Promise.allSettled，有没有失败的都能得到每个的状态
+// Promise.all([
+//     Promise.resolve({
+//         code: 200,
+//         data: [1,2]
+//     }),
+//     Promise.reject({
+//         code: 200,
+//         data: [3,4]
+//     }),
+//     Promise.resolve({
+//         code: 200,
+//         data: [5,6]
+//     }),
+// ]).then(res=> {
+//     console.log('success');
+// }).catch(err=> {
+//     console.log('fail');
+// })
+Promise.allSettled([
+    Promise.resolve({
+        code: 200,
+        data: [1,2]
+    }),
+    Promise.reject({
+        code: 200,
+        data: [3,4]
+    }),
+    Promise.resolve({
+        code: 200,
+        data: [5,6]
+    }),
+]).then(res=> {
+    console.log('success', res);
+    const data = res.filter(item=>item.status === 'fulfilled')
+    console.log(data)
+}).catch(err=> {
+    console.log('fail');
+})
