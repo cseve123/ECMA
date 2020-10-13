@@ -25,6 +25,6 @@
 // import './026-try-catch'
 // import './027-json'
 // import './028-import'
-import './029-globalThis'
+// import './029-globalThis'
 // let sum = (x, y) => x + y
 // console.log(sum(4, 5))

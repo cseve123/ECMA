@@ -135,3 +135,17 @@ const res10 = Object.entries(course10).filter(([key, val]) => {
   return val > 80;
 })
 console.log(Object.fromEntries(res10));
+
+// ES11 ?可选链
+const obj11 = {
+  name: '1',
+  age:123,
+  getNum(){
+    return 455
+  }
+}
+// 如果是返回的数据不确定有没有时
+const num11 = obj11 && obj11.getNum && obj11.getNum();
+// 可选写法
+const Num11 = obj11?.getNum?.();
+console.log(Num11); 
