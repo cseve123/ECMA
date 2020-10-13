@@ -58,3 +58,27 @@ const str10 = ' imooc  ';
 // console.log(str10.trimStart());
 // console.log(str10.trimEnd());
 console.log(str10.trim())
+
+// ------------------------------
+// ES11
+// String.prototype.matchAll
+const str11 = `
+  <html>
+    <body>
+      <div>第一个div</div>
+      <p>这里是p标签</p>
+      <div>第二个div</div>
+    </body>
+  </html>
+`
+// matchAll 必须有g修饰符进行全局匹配
+const regExp11 = /<div>(.*)<\/div>/g;
+function selectDiv(regExp, str) {
+  let matches = []
+  for (let match of str.matchAll(regExp)) {
+    matches.push(match[1]);
+  }
+  return matches
+}
+const res11 = selectDiv(regExp11, str11);
+console.log(res11);
