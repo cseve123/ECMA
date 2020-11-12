@@ -48,7 +48,7 @@ console.log(date);
 const {year, month, day} = date.groups;
 console.log(year,month,day);
 
-// 先行断言
+// 先行断 言
 const str9 = 'ecmascript';
 console.log(str9.match(/ecma(?=script)/));
 // 后行断言
