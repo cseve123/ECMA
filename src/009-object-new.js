@@ -150,7 +150,7 @@ const num11 = obj11 && obj11.getNum && obj11.getNum();
 const Num11 = obj11?.getNum?.();
 console.log(Num11); 
 
-// ?? 空值合并运算，只有值为undefined，null才为false
+// ?? 空值合并运算，只有值为undefined，null才为false 
 const b = null;
 // const a = b || 5; 修复用||取值的方式
 const a = b ?? 6;
