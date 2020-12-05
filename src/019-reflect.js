@@ -64,7 +64,7 @@ user3 = new Proxy(user3, {
             throw new Error('不可删除')
         } else {
             // delete target[prop]
-            Reflect.defineProperty(target, prop)
+            Reflect.deleteProperty(target, prop)
             return true
         }
     },
